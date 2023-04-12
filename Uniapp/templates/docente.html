@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{%block body%}
+<div class="contenedor_global">
+    <div class="card text-center">
+        <div class="card-header">
+          Código Docente {{docente.id}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{docente.apellidos }}</h5>
+          <p class="card-text">{{docente.email}}.</p>
+        </div>
+        <div class="card-footer text-body-secondary">
+          {{docente.edad}} años
+        </div>
+      </div>
+</div>
+{%endblock%}

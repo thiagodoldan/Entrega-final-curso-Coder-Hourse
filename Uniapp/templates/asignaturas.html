@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+{%block body%}
+{%block asignaturas%} aria-current="page" class="nav-link active" {%endblock%}
+<div class="contenedor_global">
+
+    <form action="/agregar_asignatura/" method="POST" class="row g-3 needs-validation" novalidate>{% csrf_token%}
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre(s)</label>
+          <input name="nombre" type="text" class="form-control" id="validationCustom01" required>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Creditos</label>
+          <input name="creditos" type="number" class="form-control" id="validationCustom05" required="">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Agregar</button>
+        </div>
+      </form>
+      <br><br>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Creditos</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for a in asignaturas%}
+          <tr>
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.nombre}}</td>
+            <td>{{a.creditos}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+</div>
+{%endblock%}

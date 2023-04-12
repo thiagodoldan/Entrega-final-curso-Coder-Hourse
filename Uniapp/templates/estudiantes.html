@@ -1,0 +1,65 @@
+{%extends "base.html"%}
+{%block body%}
+{%block estudiantes%}aria-current="page" class="nav-link active"{%endblock%}
+<div class="contenedor_global">
+
+    <form action="/agregar_estudiante/" method="POST" class="row g-3 needs-validation" novalidate>{% csrf_token%}
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre(s)</label>
+          <input name="nombres" type="text" class="form-control" id="validationCustom01" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido(s)</label>
+          <input name="apellidos" type="text" class="form-control" id="validationCustom02" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input name="email" type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Carrera</label>
+          <select name="carrera" class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Seleccionar...</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Ingeniería">Ingeniería</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Edad</label>
+          <input name="edad" type="number" class="form-control" id="validationCustom05" required="">
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Agregar</button>
+        </div>
+      </form>
+      <br><br>
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre(s)</th>
+            <th scope="col">Apellido(s)</th>
+            <th scope="col">Email</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Carrera</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for e in estudiantes%}
+          <tr>
+            <th scope="row">{{e.id}}</th>
+            <td>{{e.nombres}}</td>
+            <td>{{e.apellidos}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.edad}}</td>
+            <td>{{e.carrera}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+</div>
+{%endblock%}

@@ -1,0 +1,9 @@
+.contenedor_texto{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 10%;
+}
+
+.contenedor_global{
+    margin: 70px;
+}

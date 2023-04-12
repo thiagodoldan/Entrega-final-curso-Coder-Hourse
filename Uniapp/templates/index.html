@@ -1,0 +1,42 @@
+{% extends "base.html"%}
+{%load static%}
+{%block body%}
+<img src='{%static "img/Encabezado.jpg"%}' class="img-fluid" alt="">
+<div class="contenedor_global contenedor_texto">
+<h1>¡Bienvenidos a nuestra universidad!</h1>
+<br><br>
+<div class="contenedor_info">
+    Somos una institución de educación superior comprometida con el éxito de nuestros estudiantes. Ofrecemos una amplia variedad de programas académicos de alta calidad en áreas como negocios, tecnología, ciencias sociales, ciencias naturales, arte y humanidades.
+    En nuestra universidad, no solo te prepararás para tu carrera, sino que también tendrás la oportunidad de crecer personalmente. A través de actividades extracurriculares, deportes, grupos de estudio y organizaciones estudiantiles, podrás conocer personas de diferentes orígenes y desarrollar habilidades de liderazgo y trabajo en equipo.
+    Nuestro cuerpo docente está compuesto por expertos en sus campos de estudio y están comprometidos con ayudarte a alcanzar tus metas académicas y profesionales. Además, nuestras instalaciones modernas y tecnológicas están diseñadas para que puedas aprender y crecer en un ambiente cómodo y seguro.
+    En nuestra universidad, nos esforzamos por brindar una educación accesible y asequible para todos. Ofrecemos becas y opciones de ayuda financiera para aquellos que lo necesitan.
+    ¡Únete a nuestra comunidad universitaria y descubre todo lo que nuestra universidad tiene para ofrecer!
+
+    <br><br>
+
+    <img src='{%static "img/campus.jpg"%}' class="img-thumbnail" alt="...">
+</div>
+<div class="contenedor_carreras">
+    <h1>Oferta Acádemica</h1>
+    <div class="card">
+        <img src='{%static "img/medicina.jpg"%}' class="card-img-top" alt="...">
+      
+        <div class="card-body">
+          <h5 class="card-title">Medicina</h5>
+          <p class="card-text">La carrera de Medicina es una de las más demandadas en Argentina debido a la alta necesidad de profesionales en el área de la salud. Los médicos son altamente valorados y su labor es esencial para la sociedad.</p>
+          <a href="#" class="btn btn-primary">Ver más</a>
+        </div>
+    </div>
+      <br><br>
+    <div class="card">
+    <img src='{%static "img/ingenieria.jpg"%}' class="card-img-top" alt="...">
+    
+    <div class="card-body">
+        <h5 class="card-title">Ingeniería</h5>
+        <p class="card-text">La ingeniería es otra carrera altamente demandada en Argentina, con especial énfasis en las ramas de la informática, electrónica y mecánica. La industria tecnológica está en constante crecimiento, lo que aumenta la demanda de ingenieros.</p>
+        <a href="#" class="btn btn-primary">Ver más</a>
+    </div>
+    </div>
+</div>
+</div>
+{%endblock%}

@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%block body%}
+<div class="contenedor_global">
+    <div class="card text-center">
+        <div class="card-header">
+          Código Asignatura {{asignatura.id}}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{asignatura.nombre}}</h5>
+          <p class="card-text">Créditos: {{asignatura.creditos}}</p>
+        </div>
+      </div>
+</div>
+{%endblock%}
